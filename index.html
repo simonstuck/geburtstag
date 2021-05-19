@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Herzlichen Gl&uuml;ckwunsch, Papa!</title>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <style>
+            html.sr .load-hidden {
+                visibility: hidden;
+            }
+
+            body {
+                font-size: 30px;
+            }
+
+            body .intro {
+                padding: 1em;
+            }
+
+            body #emoji-reveal {
+                font-size: 65px;
+                /* margin: 0 20%; */
+                min-width: 400px;
+                text-align: center;
+            }
+
+            body #emoji-reveal .emoji-reveal {
+                padding: 20px;
+            }
+
+            body #naim-mu-so-2-reveal {
+                text-align: center;
+            }
+
+            #baer {
+                position: 'absolute';
+                size: 1em;
+            }
+        </style>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                const emojis = [
+                    '&#129395;',
+                    '&#127881;',
+                    '&#127870;',
+                    '&#127873;',
+                    '&#127880;'
+                ]
+                for (i=0; i<66; i++) {
+                    const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+                    const padding = 40 + Math.floor(Math.random() * 60);
+                    $('<span class="emoji-reveal" style="padding: ' + padding +'px;">').html(emoji).appendTo($('#emoji-reveal'));
+                    ScrollReveal().reveal('.emoji-reveal', { delay: 400 });
+                }
+
+                ScrollReveal().reveal('#naim-mu-so-2-reveal', { delay: 400 });
+                ScrollReveal().reveal('#more-info-reveal', { delay: 400 });
+                ScrollReveal().reveal('.emoji-reveal', { delay: 400 });
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="clearfix jumbotron header" style="position: relative;">
+                <h1>Herzlichen Gl&uuml;ckwunsch, Papa!</h1>
+                <h2>von Simmy, Fidi und B&auml;r!</h2>
+                <img src="assets/baer.webp" style="height: 4em; position: absolute; right: 0px; bottom: 1em;" />
+            </div>
+
+            <div class="clearfix intro">
+                <p>Da in diesem Jahr neben deinem Geburtstag auch die Pension ansteht m&ouml;chten wir dir dieses Mal etwas ganz besonderes schenken...</p>
+            </div>
+
+            <div class="clearfix" id="emoji-reveal"></div>
+        </div>
+
+        <div id="naim-mu-so-2-reveal" class="load-hidden">
+            <h2>Einen Naim Mu-so 2</h2>
+            <a href="https://www.naimaudio.com/de/mu-so" target="_blank">
+                <img src="assets/naim-mu-so-2.png" alt="Naim Mu-so 2" width="100%" />
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="clearfix intro">
+                <p>Den <a href="https://www.naimaudio.com/de/mu-so" target="_blank">Mu-so 2</a> kannst du zum Beispiel als neue Hifi-Anlage im Wohnzimmer aufbauen. Mit dem iPhone kannst du dann die Musik steuern, wie mit Siri <img src="assets/siri.png" style="height: 1em; width: 1em;"  />!</p>
+                <p style="padding-top: 1em;">W&auml;hrend du dich entscheidest, wo die neue Anlage stehen soll, kannst du hier noch mehr erfahren:</p>
+                <ul>
+                    <li><a href="https://www.naimaudio.com/de/mu-so" target="_blank">Naim Mu-so 2 Website</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=TKYKn7RO_WY" target="_blank">&Uuml;berblick als Video auf Youtube</a></li>
+                </ul>    
+            </div>
+        </div>
+    </body>
+</html>
